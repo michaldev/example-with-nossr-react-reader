@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponentm, useState } from "react";
 import { ReactReader } from "react-reader";
 
 type EbookViewerProps = {
@@ -6,6 +6,7 @@ type EbookViewerProps = {
 };
 
 const EbookViewer: FunctionComponent<EbookViewerProps> = ({ url }) => {
+  const [location,setLocation] = useState<string|number>(0)
   return (
     <div
       style={{
@@ -14,6 +15,8 @@ const EbookViewer: FunctionComponent<EbookViewerProps> = ({ url }) => {
       }}
     >
       <ReactReader
+        location={location}
+        locationChanged={setLocation}
         url={url}
       />
     </div>
