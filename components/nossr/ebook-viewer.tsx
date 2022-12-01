@@ -1,4 +1,4 @@
-import { FunctionComponentm, useState } from "react";
+import { FunctionComponent, useState } from "react";
 import { ReactReader } from "react-reader";
 
 type EbookViewerProps = {
